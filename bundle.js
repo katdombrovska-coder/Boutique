@@ -4166,7 +4166,7 @@ body {
     font-size: 2.25rem;
     line-height: 1.16;
     letter-spacing: -0.025em;
-    max-width: 11.5em;
+    max-width: 12em;
     margin-left: 0;
     margin-right: 0;
 }
@@ -4367,9 +4367,12 @@ body {
 .hero-visual-wrap {
     position: relative;
     width: 100%;
-    max-width: 420px;
+    max-width: 380px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -4379,33 +4382,80 @@ body {
     }
 }
 
-.hero-visual-card {
-    position: relative;
-    border-radius: 28px;
-    overflow: hidden;
-    background: linear-gradient(165deg, #fffcf9 0%, #f8f0e8 100%);
-    border: 1px solid #f0e4dc;
-    box-shadow:
-        0 24px 56px -32px rgba(36, 0, 41, 0.16),
-        0 12px 28px -20px rgba(236, 28, 140, 0.1);
+.hero-consult-card {
+    width: 100%;
+    max-width: 360px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
+    padding: 2rem 1.75rem 1.75rem;
+    text-align: center;
 }
 
-.hero-visual-card img,
-.hero-visual-card svg {
-    display: block;
-    width: 100%;
-    height: auto;
+.hero-consult-accent {
+    width: 40px;
+    height: 2px;
+    background: #e91e8c;
+    margin: 0 auto 1.25rem;
+    border-radius: 1px;
+}
+
+.hero-consult-title {
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #240029;
+    margin: 0 0 0.5rem;
+}
+
+.hero-consult-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(58, 18, 64, 0.72);
+    margin: 0 0 1.5rem;
+}
+
+.hero-consult-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 9999px;
+    background: #ec1c8c;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgba(236, 28, 140, 0.15);
+    box-shadow: 0 12px 28px -14px rgba(236, 28, 140, 0.45);
+    transition:
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s ease;
+}
+
+.hero-consult-cta:hover,
+.hero-consult-cta:active {
+    background: #ec1c8c;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 16px 34px -14px rgba(236, 28, 140, 0.5);
+}
+
+.hero-consult-note {
+    margin: 1.25rem 0 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(107, 79, 111, 0.65);
 }
 
 @media (max-width: 767px) {
     .hero-visual-wrap {
         margin-top: 0.25rem;
-    }
-
-    .hero-visual-card img {
-        max-height: 320px;
-        object-fit: contain;
-        object-position: center top;
     }
 
     .hero-title {
@@ -4414,19 +4464,8 @@ body {
     }
 
     .hero-title .hero-title-break {
-        display: inline;
+        display: block;
     }
-}
-
-.hero-visual-glow {
-    position: absolute;
-    top: 10%;
-    right: -8%;
-    width: 45%;
-    height: 50%;
-    border-radius: 9999px;
-    background: radial-gradient(circle, rgba(236, 28, 140, 0.12) 0%, transparent 70%);
-    pointer-events: none;
 }
 
 .card-dark {
@@ -38781,7 +38820,7 @@ const Contact = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MO
             lineNumber: 89,
             columnNumber: 13
           }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("a", {
-            href: "https://t.me/atelier",
+            href: "https://t.me/margoserbina",
             target: "_blank",
             rel: "noopener noreferrer",
             className: "flex-1 inline-flex items-center justify-center gap-2 bg-[#ec1c8c] hover:bg-[#c8146f] text-white font-sans-clean text-[14px] font-semibold px-5 py-3.5 rounded-full transition-all hover:-translate-y-0.5 shadow-[0_12px_30px_-12px_rgba(236,28,140,0.55)]",
@@ -39130,7 +39169,7 @@ const Footer = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MOD
             lineNumber: 48,
             columnNumber: 13
           }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-            href: "https://t.me/atelier",
+            href: "https://t.me/margoserbina",
             target: "_blank",
             rel: "noopener noreferrer",
             className: "w-11 h-11 rounded-full bg-white border border-[#240029]/10 flex items-center justify-center text-[#240029] hover:text-[#ec1c8c] hover:border-[#ec1c8c]/40 transition-all",
@@ -39411,7 +39450,7 @@ const Hero = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODUL
           fileName: _jsxFileName,
           lineNumber: 23,
           columnNumber: 11
-        }, undefined), "\u0410\u0442\u0435\u043B\u044C\u0454 \u2022 \u0420\u0435\u043C\u043E\u043D\u0442 \u0442\u0430 \u0456\u043D\u0434\u0438\u0432\u0456\u0434\u0443\u0430\u043B\u044C\u043D\u0435 \u043F\u043E\u0448\u0438\u0442\u0442\u044F"]
+        }, undefined), "BOUTIQUE TAILORING SERVICE"]
       }, void 0, true, {
         fileName: _jsxFileName,
         lineNumber: 22,
@@ -39425,33 +39464,33 @@ const Hero = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODUL
         "x-component": "h1",
         "x-id": "Hero_26_8",
         "x-dynamic": "false",
-        children: ["\u0410\u0442\u0435\u043B\u044C\u0454 ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("span", {
-          className: "hero-title-highlight",
+        children: ["\u0406\u043D\u0434\u0438\u0432\u0456\u0434\u0443\u0430\u043B\u044C\u043D\u0435 \u043F\u043E\u0448\u0438\u0442\u0442\u044F", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("span", {
+          className: "hero-title-break",
+          "aria-hidden": "true",
           "x-file-name": "Hero",
           "x-line-number": "28",
           "x-column": "10",
           "x-component": "span",
           "x-id": "Hero_28_10",
-          "x-dynamic": "false",
-          children: "\u0456\u043D\u0434\u0438\u0432\u0456\u0434\u0443\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u043F\u043E\u0448\u0438\u0442\u0442\u044F"
+          "x-dynamic": "false"
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 28,
           columnNumber: 11
         }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("span", {
-          className: "hero-title-break",
-          "aria-hidden": "true",
+          className: "hero-title-highlight",
           "x-file-name": "Hero",
           "x-line-number": "29",
           "x-column": "10",
           "x-component": "span",
           "x-id": "Hero_29_10",
-          "x-dynamic": "false"
+          "x-dynamic": "false",
+          children: "\u0442\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0456\u0439\u043D\u0430 \u043F\u0456\u0434\u0433\u043E\u043D\u043A\u0430"
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 29,
           columnNumber: 11
-        }, undefined), " \u0442\u0430 \u043F\u0456\u0434\u0433\u043E\u043D\u043A\u0438 \u043E\u0434\u044F\u0433\u0443"]
+        }, undefined)]
       }, void 0, true, {
         fileName: _jsxFileName,
         lineNumber: 26,
@@ -39465,18 +39504,7 @@ const Hero = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODUL
         "x-component": "p",
         "x-id": "Hero_31_8",
         "x-dynamic": "false",
-        children: ["\u041F\u0440\u0430\u0446\u044E\u0454\u043C\u043E \u0437 \u0442\u043A\u0430\u043D\u0438\u043D\u043E\u044E, \u0448\u043A\u0456\u0440\u043E\u044E \u0442\u0430 \u0445\u0443\u0442\u0440\u043E\u043C.", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("br", {
-          "x-file-name": "Hero",
-          "x-line-number": "33",
-          "x-column": "10",
-          "x-component": "br",
-          "x-id": "Hero_33_10",
-          "x-dynamic": "false"
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 33,
-          columnNumber: 11
-        }, undefined), " \u0410\u043A\u0443\u0440\u0430\u0442\u043D\u043E \u043F\u0456\u0434\u0433\u0430\u043D\u044F\u0454\u043C\u043E \u043E\u0434\u044F\u0433 \u043F\u043E \u0444\u0456\u0433\u0443\u0440\u0456, \u0440\u0435\u043C\u043E\u043D\u0442\u0443\u0454\u043C\u043E \u0443\u043B\u044E\u0431\u043B\u0435\u043D\u0456 \u0440\u0435\u0447\u0456 \u0442\u0430 \u0441\u0442\u0432\u043E\u0440\u044E\u0454\u043C\u043E \u0432\u0438\u0440\u043E\u0431\u0438 \u0437\u0430 \u0456\u043D\u0434\u0438\u0432\u0456\u0434\u0443\u0430\u043B\u044C\u043D\u0438\u043C\u0438 \u043C\u0456\u0440\u043A\u0430\u043C\u0438 \u0437 \u0443\u0432\u0430\u0433\u043E\u044E \u0434\u043E \u043A\u043E\u0436\u043D\u043E\u0457 \u0434\u0435\u0442\u0430\u043B\u0456."]
+        children: "\u041F\u0440\u0430\u0446\u044E\u0454\u043C\u043E \u0437 \u0442\u043A\u0430\u043D\u0438\u043D\u043E\u044E, \u0448\u043A\u0456\u0440\u043E\u044E \u0442\u0430 \u0445\u0443\u0442\u0440\u043E\u043C."
       }, void 0, false, {
         fileName: _jsxFileName,
         lineNumber: 31,
@@ -39548,7 +39576,7 @@ const Hero = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODUL
           lineNumber: 40,
           columnNumber: 11
         }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-          href: "https://t.me/atelier",
+          href: "https://t.me/margoserbina",
           target: "_blank",
           rel: "noopener noreferrer",
           className: "hero-btn-secondary",
@@ -39624,50 +39652,88 @@ const Hero = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODUL
       "x-component": "div",
       "x-id": "Hero_54_6",
       "x-dynamic": "false",
-      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("div", {
-        className: "hero-visual-glow",
-        "aria-hidden": "true",
+      children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("div", {
+        className: "hero-consult-card",
+        "data-testid": "hero-consult-card",
         "x-file-name": "Hero",
         "x-line-number": "55",
         "x-column": "8",
         "x-component": "div",
         "x-id": "Hero_55_8",
-        "x-dynamic": "false"
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 55,
-        columnNumber: 9
-      }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("div", {
-        className: "hero-visual-card",
-        "x-file-name": "Hero",
-        "x-line-number": "56",
-        "x-column": "8",
-        "x-component": "div",
-        "x-id": "Hero_56_8",
         "x-dynamic": "false",
-        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("img", {
-          src: "./hero-atelier.svg",
-          alt: "\u0415\u043B\u0435\u0433\u0430\u043D\u0442\u043D\u0430 \u0456\u043B\u044E\u0441\u0442\u0440\u0430\u0446\u0456\u044F \u0430\u0442\u0435\u043B\u044C\u0454 \u0437 \u043C\u0430\u043D\u0435\u043A\u0435\u043D\u043E\u043C \u0442\u0430 \u0441\u043D\u0442\u0438\u043C\u0435\u0442\u0440\u043E\u043C",
-          width: "520",
-          height: "640",
-          loading: "eager",
-          decoding: "async",
+        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("div", {
+          className: "hero-consult-accent",
+          "aria-hidden": "true",
+          "x-file-name": "Hero",
+          "x-line-number": "56",
+          "x-column": "10",
+          "x-component": "div",
+          "x-id": "Hero_56_10",
+          "x-dynamic": "false"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 56,
+          columnNumber: 11
+        }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("h3", {
+          className: "hero-consult-title",
           "x-file-name": "Hero",
           "x-line-number": "57",
           "x-column": "10",
-          "x-component": "img",
+          "x-component": "h3",
           "x-id": "Hero_57_10",
-          "x-dynamic": "false"
+          "x-dynamic": "false",
+          children: "\u0411\u0435\u0437\u043A\u043E\u0448\u0442\u043E\u0432\u043D\u0430 \u043A\u043E\u043D\u0441\u0443\u043B\u044C\u0442\u0430\u0446\u0456\u044F"
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 57,
           columnNumber: 11
-        }, undefined)
-      }, void 0, false, {
+        }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("p", {
+          className: "hero-consult-subtitle",
+          "x-file-name": "Hero",
+          "x-line-number": "58",
+          "x-column": "10",
+          "x-component": "p",
+          "x-id": "Hero_58_10",
+          "x-dynamic": "false",
+          children: "\u0417\u0430\u043F\u0438\u0448\u0456\u0442\u044C\u0441\u044F \u043D\u0430 \u043F\u0440\u0438\u043C\u0456\u0440\u043A\u0443 \u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 58,
+          columnNumber: 11
+        }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
+          href: "#contacts",
+          className: "hero-consult-cta",
+          "data-testid": "hero-consult-cta",
+          "x-file-name": "Hero",
+          "x-line-number": "59",
+          "x-column": "10",
+          "x-component": "a",
+          "x-id": "Hero_59_10",
+          "x-dynamic": "false",
+          children: "\u0417\u0430\u043B\u0438\u0448\u0438\u0442\u0438 \u0437\u0430\u044F\u0432\u043A\u0443 \u2192"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 59,
+          columnNumber: 11
+        }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("p", {
+          className: "hero-consult-note",
+          "x-file-name": "Hero",
+          "x-line-number": "62",
+          "x-column": "10",
+          "x-component": "p",
+          "x-id": "Hero_62_10",
+          "x-dynamic": "false",
+          children: "\u2713 \u0412\u0456\u0434\u043F\u043E\u0432\u0456\u043C\u043E \u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C 1 \u0433\u043E\u0434\u0438\u043D\u0438"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 62,
+          columnNumber: 11
+        }, undefined)]
+      }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 56,
+        lineNumber: 55,
         columnNumber: 9
-      }, undefined)]
+      }, undefined)
     }, void 0, true, {
       fileName: _jsxFileName,
       lineNumber: 54,
@@ -40278,7 +40344,7 @@ const Navbar = () => {
             lineNumber: 74,
             columnNumber: 13
           }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-            href: "https://t.me/atelier",
+            href: "https://t.me/margoserbina",
             target: "_blank",
             rel: "noopener noreferrer",
             className: "hidden md:inline-flex nav-btn-telegram font-sans-clean",
@@ -40443,7 +40509,7 @@ const Navbar = () => {
             lineNumber: 126,
             columnNumber: 15
           }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-            href: "https://t.me/atelier",
+            href: "https://t.me/margoserbina",
             target: "_blank",
             rel: "noopener noreferrer",
             className: "flex-1 nav-btn-telegram justify-center py-2.5",
