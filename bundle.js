@@ -4029,13 +4029,13 @@ body {
 }
 
 .contact-section {
-    padding-top: 2.5rem;
+    padding-top: 80px;
     padding-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
     .contact-section {
-        padding-top: 3rem;
+        padding-top: 80px;
         padding-bottom: 7rem;
     }
 }
