@@ -4036,7 +4036,13 @@ body {
 }
 
 .contact-content-grid {
-    margin-top: 40px;
+    margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+    .contact-content-grid {
+        margin-top: 40px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -4100,7 +4106,7 @@ body {
     margin-top: 0.75rem;
     border-radius: 1.25rem;
     padding: 1rem;
-    background: rgba(255, 252, 248, 0.97);
+    background: #ffffff;
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
     border: 1px solid #ebe4d8;
@@ -4557,7 +4563,7 @@ body {
 
 @media (max-width: 767px) {
     .hero-section {
-        padding-top: 6rem;
+        padding-top: 5.5rem;
         padding-bottom: 0.25rem;
     }
 
@@ -4566,7 +4572,13 @@ body {
     }
 
     .hero-title {
+        font-size: clamp(1.65rem, 7.2vw, 2.125rem);
         max-width: 100%;
+    }
+
+    .hero-title .hero-title-highlight {
+        font-size: 1em;
+        padding-left: clamp(1.25rem, 11vw, 2.75rem);
     }
 
     .hero-title .hero-title-break {
@@ -4580,6 +4592,14 @@ body {
     .hero-buttons .hero-btn-primary {
         width: 100%;
         justify-content: center;
+    }
+
+    .contact-section [data-testid="contact-map"] {
+        min-height: 300px;
+    }
+
+    .contact-section [data-testid="contact-map"] iframe {
+        min-height: 280px;
     }
 }
 
