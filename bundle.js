@@ -3902,13 +3902,13 @@ body {
 
 .prices-section {
     padding-top: 1rem;
-    padding-bottom: 3rem;
+    padding-bottom: 40px;
 }
 
 @media (min-width: 768px) {
     .prices-section {
         padding-top: 1.5rem;
-        padding-bottom: 3.5rem;
+        padding-bottom: 40px;
     }
 }
 
@@ -3917,13 +3917,15 @@ body {
 }
 
 .prices-disclaimer-wrap {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
     text-align: center;
 }
 
 @media (min-width: 768px) {
     .prices-disclaimer-wrap {
-        margin-top: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 0;
     }
 }
 
@@ -3995,13 +3997,14 @@ body {
     align-items: center;
     gap: 1rem;
     max-width: 28rem;
-    margin: 2rem auto 0;
+    margin: 1.25rem auto 0;
     padding: 0 0.5rem;
 }
 
 @media (min-width: 768px) {
     .prices-atelier-divider {
-        margin-top: 2.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
     }
 }
 
@@ -4029,15 +4032,20 @@ body {
 }
 
 .contact-section {
-    padding-top: 80px;
-    scroll-margin-top: 80px;
+    padding-top: 100px;
+    scroll-margin-top: 100px;
     padding-bottom: 5rem;
+    overflow: visible;
+}
+
+.contact-section .contact-section-header {
+    overflow: visible;
 }
 
 @media (min-width: 768px) {
     .contact-section {
-        padding-top: 96px;
-        scroll-margin-top: 96px;
+        padding-top: 100px;
+        scroll-margin-top: 100px;
         padding-bottom: 7rem;
     }
 }
@@ -38559,7 +38567,7 @@ const Contact = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MO
     "x-id": "Contact_11_4",
     "x-dynamic": "false",
     children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
-      className: "text-center max-w-2xl mx-auto mb-10 md:mb-14",
+      className: "contact-section-header text-center max-w-2xl mx-auto mb-10 md:mb-14",
       "x-file-name": "Contact",
       "x-line-number": "12",
       "x-column": "6",
