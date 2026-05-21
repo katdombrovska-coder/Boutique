@@ -4267,7 +4267,7 @@ body {
     font-size: clamp(2rem, 8vw, 52px);
     line-height: 1.08;
     letter-spacing: -0.025em;
-    max-width: 12em;
+    max-width: 460px;
     margin-left: 0;
     margin-right: 0;
 }
@@ -4275,13 +4275,12 @@ body {
 @media (min-width: 768px) {
     .hero-title {
         font-size: 52px;
-        max-width: none;
     }
 }
 
 .hero-title .hero-title-highlight {
     display: block;
-    font-size: 1em;
+    font-size: 0.85em;
     color: #ec1c8c;
     font-family: 'Bricolage Grotesque', serif;
     font-style: italic;
@@ -4293,7 +4292,6 @@ body {
 
 @media (min-width: 768px) {
     .hero-title .hero-title-highlight {
-        font-size: 52px;
         margin-left: 0;
         padding-left: 80px;
     }
@@ -4573,11 +4571,9 @@ body {
 
     .hero-title {
         font-size: clamp(1.65rem, 7.2vw, 2.125rem);
-        max-width: 100%;
     }
 
     .hero-title .hero-title-highlight {
-        font-size: 1em;
         padding-left: clamp(1.25rem, 11vw, 2.75rem);
     }
 
