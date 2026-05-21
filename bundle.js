@@ -4196,16 +4196,33 @@ body {
     }
 }
 
+/* === Site container (matches navbar wrapper) === */
+.site-container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    .site-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 /* === Hero section === */
 .hero-section {
     overflow: hidden;
-    padding-top: 7rem;
+    padding-top: calc(4.5rem + 2.75rem);
     padding-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
     .hero-section {
-        padding-top: 9rem;
+        padding-top: calc(5.75rem + 2.75rem);
         padding-bottom: 1rem;
     }
 }
@@ -4239,28 +4256,63 @@ body {
     align-items: center;
 }
 
-.hero-content,
-.hero-visual-wrap {
-    align-self: center;
-}
-
 @media (min-width: 768px) {
     .hero-grid {
         grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
         gap: 2.5rem;
-        align-items: center;
+        align-items: start;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-content .hero-title,
+    .hero-content .hero-subtitle,
+    .hero-content .hero-buttons {
+        margin-top: 0;
+    }
+
+    .hero-visual-wrap {
+        align-items: flex-start;
+        justify-content: flex-end;
+        align-self: start;
+    }
+
+    .hero-visual-wrap .hero-consult-card {
+        height: auto;
+        min-height: 0;
+        margin-left: auto;
     }
 }
 
 @media (min-width: 1024px) {
     .hero-grid {
         gap: 3rem;
-        align-items: center;
+        align-items: start;
     }
 }
 
 .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
     text-align: left;
+}
+
+.hero-content .chip-label {
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.hero-content .hero-title,
+.hero-content .hero-subtitle,
+.hero-content .hero-buttons,
+.hero-content .hero-tags {
+    margin-top: 0;
 }
 
 .hero-title {
@@ -4305,7 +4357,7 @@ body {
     max-width: 36rem;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1.75rem;
+    margin-top: 0;
     font-size: 15px;
     line-height: 1.78;
     letter-spacing: 0.015em;
@@ -4314,7 +4366,7 @@ body {
 
 @media (min-width: 768px) {
     .hero-subtitle {
-        margin-top: 2rem;
+        margin-top: 0;
         font-size: 16px;
         line-height: 1.82;
         max-width: 38rem;
@@ -4326,12 +4378,12 @@ body {
     flex-wrap: wrap;
     align-items: center;
     gap: 0.75rem;
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 @media (min-width: 768px) {
     .hero-buttons {
-        margin-top: 2.25rem;
+        margin-top: 0;
     }
 }
 
@@ -4446,7 +4498,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem 0.65rem;
-    margin-top: 1.5rem;
+    margin-top: 0;
 }
 
 .hero-tag {
@@ -4479,11 +4531,12 @@ body {
     .hero-visual-wrap {
         max-width: none;
         margin-right: 0;
+        margin-left: 0;
         margin-top: 0;
-        align-self: center;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-end;
+        align-self: start;
         min-height: 0;
     }
 }
@@ -4561,7 +4614,7 @@ body {
 
 @media (max-width: 767px) {
     .hero-section {
-        padding-top: 5.5rem;
+        padding-top: calc(4.5rem + 2.75rem);
         padding-bottom: 0.25rem;
     }
 
@@ -39475,7 +39528,7 @@ var _jsxFileName = "/app/frontend/src/components/Hero.jsx";
 const serviceTags = ["\u0420\u0443\u0447\u043D\u0430 \u0440\u043E\u0431\u043E\u0442\u0430", "\u0428\u0432\u0438\u0434\u043A\u0438\u0439 \u0440\u0435\u043C\u043E\u043D\u0442", "\u0406\u043D\u0434\u0438\u0432\u0456\u0434\u0443\u0430\u043B\u044C\u043D\u0438\u0439 \u043F\u0456\u0434\u0445\u0456\u0434", "\u0420\u043E\u0431\u043E\u0442\u0430 \u0437 \u0434\u0435\u043B\u0456\u043A\u0430\u0442\u043D\u0438\u043C\u0438 \u0442\u043A\u0430\u043D\u0438\u043D\u0430\u043C\u0438", "\u042F\u043A\u0456\u0441\u043D\u0435 \u043F\u043E\u0448\u0438\u0442\u0442\u044F"];
 const Hero = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("section", {
   id: "top",
-  className: "hero-section relative px-4 md:px-10 lg:px-16",
+  className: "hero-section relative",
   "data-testid": "hero",
   "x-file-name": "Hero",
   "x-line-number": "6",
@@ -39544,7 +39597,7 @@ const Hero = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODUL
     lineNumber: 11,
     columnNumber: 5
   }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("div", {
-    className: "relative max-w-[1280px] mx-auto hero-grid",
+    className: "site-container relative hero-grid",
     "x-file-name": "Hero",
     "x-line-number": "20",
     "x-column": "4",
@@ -39586,7 +39639,7 @@ const Hero = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODUL
         lineNumber: 22,
         columnNumber: 9
       }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("h1", {
-        className: "hero-title font-display text-[#240029] mt-6",
+        className: "hero-title font-display text-[#240029]",
         "data-testid": "hero-title",
         "x-file-name": "Hero",
         "x-line-number": "26",
