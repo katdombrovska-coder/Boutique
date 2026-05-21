@@ -4091,8 +4091,8 @@ body {
 
 .navbar-mobile-panel {
     margin-top: 0.75rem;
-    border-radius: 1.5rem;
-    padding: 1.25rem;
+    border-radius: 1.25rem;
+    padding: 1rem;
     background: rgba(255, 252, 248, 0.97);
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
@@ -4100,6 +4100,87 @@ body {
     box-shadow:
         0 1px 0 rgba(255, 255, 255, 0.9) inset,
         0 16px 48px -20px rgba(58, 18, 64, 0.12);
+}
+
+.navbar-mobile-link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.navbar-menu-toggle {
+    flex-shrink: 0;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+}
+
+.navbar-mobile-social {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(36, 0, 41, 0.08);
+}
+
+.navbar-mobile-social-label {
+    display: block;
+    margin-bottom: 0.625rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(107, 79, 111, 0.72);
+}
+
+.navbar-mobile-social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.navbar-mobile-social-buttons .nav-btn-whatsapp,
+.navbar-mobile-social-buttons .nav-btn-telegram {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+}
+
+@media (min-width: 400px) {
+    .navbar-mobile-social-buttons {
+        flex-direction: row;
+    }
+
+    .navbar-mobile-social-buttons .nav-btn-whatsapp,
+    .navbar-mobile-social-buttons .nav-btn-telegram {
+        flex: 1;
+        width: auto;
+    }
+}
+
+@media (max-width: 1023px) {
+    .site-navbar {
+        padding: 0.5rem 0.875rem;
+        gap: 0.75rem;
+    }
+
+    .site-navbar .navbar-brand {
+        font-size: 1.25rem;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-navbar {
+        padding: 0.5rem 0.75rem;
+        border-radius: 1.25rem;
+    }
+
+    .site-navbar .navbar-brand {
+        font-size: 1.125rem;
+    }
 }
 
 /* === Hero section === */
@@ -4454,6 +4535,10 @@ body {
 }
 
 @media (max-width: 767px) {
+    .hero-section {
+        padding-top: 6rem;
+    }
+
     .hero-visual-wrap {
         margin-top: 0.25rem;
     }
@@ -4465,6 +4550,15 @@ body {
 
     .hero-title .hero-title-break {
         display: block;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .hero-buttons .hero-btn-primary {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -40141,8 +40235,28 @@ const Navbar = () => {
     });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (!open) return;
+    const onKey = e => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 1024) setOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
   return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("header", {
-    className: `no-print fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-5 md:py-6"}`,
+    className: `no-print fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-2 sm:py-3" : "py-3 sm:py-4 md:py-5 lg:py-6"}`,
     "data-testid": "navbar",
     "x-file-name": "Navbar",
     "x-line-number": "36",
@@ -40161,7 +40275,7 @@ const Navbar = () => {
       "x-source-type": "computed",
       "x-source-editable": "false",
       children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("nav", {
-        className: `site-navbar ${scrolled ? "is-scrolled" : ""}`,
+        className: `site-navbar min-w-0 ${scrolled ? "is-scrolled" : ""}`,
         "x-file-name": "Navbar",
         "x-line-number": "43",
         "x-column": "8",
@@ -40170,7 +40284,7 @@ const Navbar = () => {
         "x-dynamic": "false",
         children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
           href: "#top",
-          className: "font-display text-[#240029] text-2xl md:text-[28px] tracking-tight leading-none flex items-center gap-2",
+          className: "navbar-brand font-display text-[#240029] text-xl sm:text-2xl lg:text-[28px] tracking-tight leading-none flex items-center gap-2 min-w-0 shrink",
           "data-testid": "brand",
           "x-file-name": "Navbar",
           "x-line-number": "50",
@@ -40248,7 +40362,7 @@ const Navbar = () => {
           lineNumber: 59,
           columnNumber: 11
         }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("div", {
-          className: "flex items-center gap-2",
+          className: "navbar-actions flex items-center gap-1.5 sm:gap-2 shrink-0",
           "x-file-name": "Navbar",
           "x-line-number": "73",
           "x-column": "10",
@@ -40259,7 +40373,7 @@ const Navbar = () => {
             href: "https://wa.me/380664758819",
             target: "_blank",
             rel: "noopener noreferrer",
-            className: "hidden md:inline-flex nav-btn-whatsapp font-sans-clean",
+            className: "hidden lg:inline-flex nav-btn-whatsapp font-sans-clean",
             "data-testid": "nav-whatsapp",
             "aria-label": "WhatsApp",
             "x-file-name": "Navbar",
@@ -40288,7 +40402,7 @@ const Navbar = () => {
             href: "https://t.me/margoserbina",
             target: "_blank",
             rel: "noopener noreferrer",
-            className: "hidden md:inline-flex nav-btn-telegram font-sans-clean",
+            className: "hidden lg:inline-flex nav-btn-telegram font-sans-clean",
             "data-testid": "nav-telegram",
             "aria-label": "Telegram",
             "x-file-name": "Navbar",
@@ -40316,8 +40430,10 @@ const Navbar = () => {
           }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("button", {
             type: "button",
             onClick: () => setOpen(v => !v),
-            className: "lg:hidden w-9 h-9 rounded-full bg-white border border-[#240029]/10 flex items-center justify-center text-[#240029]",
+            className: "lg:hidden navbar-menu-toggle w-10 h-10 rounded-full bg-white border border-[#240029]/10 flex items-center justify-center text-[#240029]",
             "aria-label": "\u041C\u0435\u043D\u044E",
+            "aria-expanded": open,
+            "aria-controls": "nav-mobile-menu-panel",
             "data-testid": "nav-mobile-toggle",
             "x-file-name": "Navbar",
             "x-line-number": "94",
@@ -40355,6 +40471,7 @@ const Navbar = () => {
         lineNumber: 43,
         columnNumber: 9
       }, undefined), open && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("div", {
+        id: "nav-mobile-menu-panel",
         className: "lg:hidden navbar-mobile-panel",
         "data-testid": "nav-mobile-menu",
         "x-file-name": "Navbar",
@@ -40383,7 +40500,7 @@ const Navbar = () => {
             children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
               href: l.href,
               onClick: () => setOpen(false),
-              className: "block py-2.5 px-3 rounded-xl font-sans-clean text-[14px] text-[#3a1240]/85 hover:bg-[#fff7eb] hover:text-[#ec1c8c] transition-colors",
+              className: "navbar-mobile-link block py-2.5 px-3 rounded-xl font-sans-clean text-[#3a1240]/85 hover:bg-[#fff7eb] hover:text-[#ec1c8c] transition-colors",
               "x-file-name": "Navbar",
               "x-line-number": "115",
               "x-column": "18",
@@ -40415,18 +40532,28 @@ const Navbar = () => {
           lineNumber: 112,
           columnNumber: 13
         }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("div", {
-          className: "flex gap-2 mt-4",
+          className: "navbar-mobile-social",
           "x-file-name": "Navbar",
           "x-line-number": "125",
           "x-column": "12",
           "x-component": "div",
           "x-id": "Navbar_125_12",
           "x-dynamic": "false",
-          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
+          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("span", {
+            className: "navbar-mobile-social-label",
+            children: "\u0417\u0432'\u044F\u0437\u043E\u043A"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 125,
+            columnNumber: 14
+          }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("div", {
+            className: "navbar-mobile-social-buttons",
+            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
             href: "https://wa.me/380664758819",
             target: "_blank",
             rel: "noopener noreferrer",
-            className: "flex-1 nav-btn-whatsapp justify-center py-2.5",
+            onClick: () => setOpen(false),
+            className: "nav-btn-whatsapp",
             "x-file-name": "Navbar",
             "x-line-number": "126",
             "x-column": "14",
@@ -40453,7 +40580,8 @@ const Navbar = () => {
             href: "https://t.me/margoserbina",
             target: "_blank",
             rel: "noopener noreferrer",
-            className: "flex-1 nav-btn-telegram justify-center py-2.5",
+            onClick: () => setOpen(false),
+            className: "nav-btn-telegram",
             "x-file-name": "Navbar",
             "x-line-number": "134",
             "x-column": "14",
@@ -40476,6 +40604,11 @@ const Navbar = () => {
             fileName: _jsxFileName,
             lineNumber: 134,
             columnNumber: 15
+          }, undefined)]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 126,
+            columnNumber: 14
           }, undefined)]
         }, void 0, true, {
           fileName: _jsxFileName,
