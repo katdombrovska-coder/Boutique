@@ -3901,13 +3901,13 @@ body {
 }
 
 .prices-section {
-    padding-top: 5rem;
+    padding-top: 1rem;
     padding-bottom: 2.5rem;
 }
 
 @media (min-width: 768px) {
     .prices-section {
-        padding-top: 7rem;
+        padding-top: 1.5rem;
         padding-bottom: 3rem;
     }
 }
@@ -4187,13 +4187,13 @@ body {
 .hero-section {
     overflow: hidden;
     padding-top: 7rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
     .hero-section {
         padding-top: 9rem;
-        padding-bottom: 5rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -4222,20 +4222,27 @@ body {
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 1.75rem;
     align-items: center;
+}
+
+.hero-content,
+.hero-visual-wrap {
+    align-self: center;
 }
 
 @media (min-width: 768px) {
     .hero-grid {
         grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-        gap: 3rem;
+        gap: 2.5rem;
+        align-items: center;
     }
 }
 
 @media (min-width: 1024px) {
     .hero-grid {
-        gap: 4rem;
+        gap: 3rem;
+        align-items: center;
     }
 }
 
@@ -4427,7 +4434,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem 0.65rem;
-    margin-top: 1.75rem;
+    margin-top: 1.5rem;
 }
 
 .hero-tag {
@@ -4460,6 +4467,12 @@ body {
     .hero-visual-wrap {
         max-width: none;
         margin-right: 0;
+        margin-top: 0;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 0;
     }
 }
 
@@ -4537,10 +4550,11 @@ body {
 @media (max-width: 767px) {
     .hero-section {
         padding-top: 6rem;
+        padding-bottom: 0.25rem;
     }
 
     .hero-visual-wrap {
-        margin-top: 0.25rem;
+        margin-top: 0;
     }
 
     .hero-title {
@@ -41221,7 +41235,7 @@ const PricesSection = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPOR
     "x-id": "PricesSection_69_4",
     "x-dynamic": "false",
     children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("header", {
-      className: "text-center mb-20 md:mb-28",
+      className: "text-center mb-12 md:mb-16",
       "data-testid": "prices-masthead",
       "x-file-name": "PricesSection",
       "x-line-number": "71",
