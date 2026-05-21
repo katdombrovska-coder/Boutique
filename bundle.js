@@ -3902,13 +3902,13 @@ body {
 
 .prices-section {
     padding-top: 1rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
     .prices-section {
         padding-top: 1.5rem;
-        padding-bottom: 3rem;
+        padding-bottom: 3.5rem;
     }
 }
 
@@ -4030,12 +4030,14 @@ body {
 
 .contact-section {
     padding-top: 80px;
+    scroll-margin-top: 80px;
     padding-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
     .contact-section {
-        padding-top: 80px;
+        padding-top: 96px;
+        scroll-margin-top: 96px;
         padding-bottom: 7rem;
     }
 }
