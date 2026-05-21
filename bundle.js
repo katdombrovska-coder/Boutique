@@ -4223,7 +4223,7 @@ body {
 @media (min-width: 768px) {
     .hero-section {
         padding-top: calc(5.75rem + 2.75rem);
-        padding-bottom: 1rem;
+        padding-bottom: 1.5rem;
     }
 }
 
@@ -4258,15 +4258,15 @@ body {
 
 @media (min-width: 768px) {
     .hero-grid {
-        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-        gap: 2.5rem;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 2.25rem;
         align-items: start;
     }
 
     .hero-content {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.125rem;
     }
 
     .hero-content .hero-title,
@@ -4276,22 +4276,46 @@ body {
     }
 
     .hero-visual-wrap {
+        width: 100%;
         align-items: flex-start;
         justify-content: flex-end;
         align-self: start;
+        padding-top: 3.25rem;
+        padding-bottom: 0.25rem;
     }
 
     .hero-visual-wrap .hero-consult-card {
         height: auto;
-        min-height: 0;
+        min-height: 268px;
+        max-width: 380px;
+        width: 100%;
         margin-left: auto;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
 @media (min-width: 1024px) {
     .hero-grid {
-        gap: 3rem;
+        gap: 2.75rem;
         align-items: start;
+    }
+
+    .hero-visual-wrap {
+        padding-top: 4.25rem;
+    }
+
+    .hero-visual-wrap .hero-consult-card {
+        max-width: 392px;
+        min-height: 280px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero-visual-wrap {
+        padding-top: 4.75rem;
     }
 }
 
@@ -4519,7 +4543,7 @@ body {
 .hero-visual-wrap {
     position: relative;
     width: 100%;
-    max-width: 380px;
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -4534,20 +4558,17 @@ body {
         margin-left: 0;
         margin-top: 0;
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-end;
-        align-self: start;
         min-height: 0;
     }
 }
 
 .hero-consult-card {
     width: 100%;
-    max-width: 360px;
+    max-width: 340px;
     background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
-    padding: 2rem 1.75rem 1.75rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(58, 18, 64, 0.06);
+    padding: 2.5rem 1.65rem 2.35rem;
     text-align: center;
 }
 
@@ -4555,7 +4576,7 @@ body {
     width: 40px;
     height: 2px;
     background: #e91e8c;
-    margin: 0 auto 1.25rem;
+    margin: 0 auto 1.35rem;
     border-radius: 1px;
 }
 
@@ -4574,7 +4595,7 @@ body {
     font-size: 14px;
     line-height: 1.55;
     color: rgba(58, 18, 64, 0.72);
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.65rem;
 }
 
 .hero-consult-cta {
@@ -4605,7 +4626,7 @@ body {
 }
 
 .hero-consult-note {
-    margin: 1.25rem 0 0;
+    margin: 1.4rem 0 0;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     line-height: 1.5;
