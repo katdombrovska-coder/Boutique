@@ -39332,7 +39332,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/arrow-down.js");
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./src/components/Navbar.jsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
@@ -39518,7 +39517,7 @@ const Hero = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODUL
         "x-component": "div",
         "x-id": "Hero_35_8",
         "x-dynamic": "false",
-        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
+        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
           href: "#prices",
           className: "hero-btn-primary",
           "data-testid": "hero-cta-prices",
@@ -39546,65 +39545,7 @@ const Hero = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODUL
           fileName: _jsxFileName,
           lineNumber: 36,
           columnNumber: 11
-        }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-          href: "https://wa.me/380664758819",
-          target: "_blank",
-          rel: "noopener noreferrer",
-          className: "hero-btn-secondary",
-          "data-testid": "hero-cta-whatsapp",
-          "x-file-name": "Hero",
-          "x-line-number": "40",
-          "x-column": "10",
-          "x-component": "a",
-          "x-id": "Hero_40_10",
-          "x-dynamic": "false",
-          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)(_Navbar__WEBPACK_IMPORTED_MODULE_2__.WhatsAppIcon, {
-            size: 15,
-            "x-file-name": "Hero",
-            "x-line-number": "41",
-            "x-column": "12",
-            "x-component": "WhatsAppIcon",
-            "x-id": "Hero_41_12",
-            "x-dynamic": "true"
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 41,
-            columnNumber: 13
-          }, undefined), " WhatsApp"]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 40,
-          columnNumber: 11
-        }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-          href: "https://t.me/margoserbina",
-          target: "_blank",
-          rel: "noopener noreferrer",
-          className: "hero-btn-secondary",
-          "data-testid": "hero-cta-telegram",
-          "x-file-name": "Hero",
-          "x-line-number": "43",
-          "x-column": "10",
-          "x-component": "a",
-          "x-id": "Hero_43_10",
-          "x-dynamic": "false",
-          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)(_Navbar__WEBPACK_IMPORTED_MODULE_2__.TelegramIcon, {
-            size: 15,
-            "x-file-name": "Hero",
-            "x-line-number": "44",
-            "x-column": "12",
-            "x-component": "TelegramIcon",
-            "x-id": "Hero_44_12",
-            "x-dynamic": "true"
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 44,
-            columnNumber: 13
-          }, undefined), " Telegram"]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 43,
-          columnNumber: 11
-        }, undefined)]
+        }, undefined)
       }, void 0, true, {
         fileName: _jsxFileName,
         lineNumber: 35,
