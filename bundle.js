@@ -3917,16 +3917,9 @@ body {
 }
 
 .prices-disclaimer-wrap {
-    margin-top: 1.5rem;
-    margin-bottom: 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
     text-align: center;
-}
-
-@media (min-width: 768px) {
-    .prices-disclaimer-wrap {
-        margin-top: 2rem;
-        margin-bottom: 0;
-    }
 }
 
 .prices-disclaimer-card {
@@ -4042,6 +4035,10 @@ body {
     overflow: visible;
 }
 
+.contact-content-grid {
+    margin-top: 40px;
+}
+
 @media (min-width: 768px) {
     .contact-section {
         padding-top: 100px;
@@ -4070,7 +4067,7 @@ body {
     gap: 1.5rem;
     border-radius: 9999px;
     padding: 0.625rem 1.25rem;
-    background: rgba(255, 251, 247, 0.9);
+    background: #ffffff;
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
     border: 1px solid #ebe4d8;
@@ -4091,7 +4088,7 @@ body {
 }
 
 .site-navbar.is-scrolled {
-    background: rgba(255, 252, 248, 0.96);
+    background: #ffffff;
     border-color: #e5ddd2;
     box-shadow:
         0 1px 0 rgba(255, 255, 255, 0.95) inset,
@@ -4261,38 +4258,39 @@ body {
 }
 
 .hero-title {
-    font-size: 2.25rem;
-    line-height: 1.16;
+    font-size: clamp(2rem, 8vw, 52px);
+    line-height: 1.08;
     letter-spacing: -0.025em;
     max-width: 12em;
     margin-left: 0;
     margin-right: 0;
 }
 
-@media (min-width: 640px) {
-    .hero-title {
-        font-size: 2.75rem;
-    }
-}
-
 @media (min-width: 768px) {
     .hero-title {
-        font-size: 2.65rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .hero-title {
-        font-size: 3rem;
+        font-size: 52px;
+        max-width: none;
     }
 }
 
 .hero-title .hero-title-highlight {
+    display: block;
+    font-size: 1em;
     color: #ec1c8c;
     font-family: 'Bricolage Grotesque', serif;
     font-style: italic;
     font-weight: 600;
     letter-spacing: -0.01em;
+    margin-left: 0;
+    padding-left: 2rem;
+}
+
+@media (min-width: 768px) {
+    .hero-title .hero-title-highlight {
+        font-size: 52px;
+        margin-left: 0;
+        padding-left: 80px;
+    }
 }
 
 .hero-title .hero-title-break {
@@ -4568,7 +4566,6 @@ body {
     }
 
     .hero-title {
-        font-size: 1.95rem;
         max-width: 100%;
     }
 
@@ -38633,7 +38630,7 @@ const Contact = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MO
       lineNumber: 12,
       columnNumber: 7
     }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
-      className: "grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7 items-stretch",
+      className: "contact-content-grid grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7 items-stretch",
       "x-file-name": "Contact",
       "x-line-number": "34",
       "x-column": "6",
